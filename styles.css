@@ -34,24 +34,8 @@ section {
 .project-container {
     display: flex; /* Enables Flexbox */
     flex-wrap: wrap; /* Allows wrapping to the next line */
-    gap: 10px; /* Space between project boxes */
-    margin-bottom: 10px; /* Space below each project section */
-}
-
-
-
-.project {
-    background: #f4f4f4; /* Light background color */
-    border: 1px solid #ccc; /* Border around project box */
-    border-radius: 8px; /* Rounded corners */
-    padding: 15px; /* Inner spacing */
-    flex: 1 1 calc(33.333% - 20px); /* 3 projects per row, adjust for gaps */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    min-width: 250px; /* Minimum width for responsiveness */
-}
-
-.project h5 {
-    margin-top: 0; /* Remove margin for title */
+    gap: 20px; /* Set to 20px for spacing between project boxes */
+    margin-bottom: 20px; /* Space below each project section */
 }
 
 footer {
@@ -92,13 +76,13 @@ button {
 }
 
 button:hover {
-    background: #55; /* Darker background on hover */
+    background: #555; /* Darker background on hover */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .project {
-        flex: 1 1 calc(25% - 10px); /* 3 projects per row on medium screens */
+        flex: 1 1 calc(33.333% - 20px); /* 3 projects per row on medium screens */
     }
 }
 
@@ -106,4 +90,45 @@ button:hover {
     .project {
         flex: 1 1 100%; /* 1 project per row on small screens */
     }
+}
+
+
+/*.project {*/
+/*    background: #f4f4f4; /* Light background color */
+/*    border: 1px solid #ccc; /* Border around project box */
+/*    border-radius: 8px; /* Rounded corners */
+/*    padding: 15px; /* Inner spacing */
+/*    flex: 1 1 calc(25% - 20px); /* 4 projects per row, adjust for gaps */
+/*    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+/*    min-width: 250px; /* Minimum width for responsiveness */
+/*}*/
+ 
+.project {
+    background: #f4f4f4; /* Light background color */
+    border: 1px solid #ccc; /* Border around project box */
+    border-radius: 8px; /* Rounded corners */
+    flex: 1 1 calc(25% - 20px); /* 4 projects per row, adjust for gaps */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    min-width: 300px; /* Minimum width for responsiveness */
+    position: relative; /* Allows absolute positioning for the link */
+}
+
+.project-link {
+    display: block; /* Makes the link a block element */
+    color: inherit; /* Inherit text color */
+    text-decoration: none; /* Remove underline */
+    height: 100%; /* Make the link fill the entire box */
+    width: 100%; /* Ensure the link spans the full width */
+    padding: 15px; /* Inner spacing */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.project h5 {
+    margin-top: 0; /* Remove margin for title */
+}
+
+.link-text {
+    display: inline-block; /* Keep it as inline-block for styling */
+    margin-top: 10px; /* Space from the description */
+    color: #007BFF; /* Optional color for the faux link */
 }
