@@ -34,9 +34,11 @@ section {
 .project-container {
     display: flex; /* Enables Flexbox */
     flex-wrap: wrap; /* Allows wrapping to the next line */
-    gap: 20px; /* Space between project boxes */
-    margin-bottom: 20px; /* Space below each project section */
+    gap: 10px; /* Space between project boxes */
+    margin-bottom: 10px; /* Space below each project section */
 }
+
+
 
 .project {
     background: #f4f4f4; /* Light background color */
@@ -90,13 +92,13 @@ button {
 }
 
 button:hover {
-    background: #555; /* Darker background on hover */
+    background: #55; /* Darker background on hover */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .project {
-        flex: 1 1 calc(50% - 20px); /* 2 projects per row on medium screens */
+        flex: 1 1 calc(25% - 10px); /* 3 projects per row on medium screens */
     }
 }
 
