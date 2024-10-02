@@ -31,10 +31,25 @@ section {
     padding: 20px;
 }
 
+.project-container {
+    display: flex; /* Enables Flexbox */
+    flex-wrap: wrap; /* Allows wrapping to the next line */
+    gap: 20px; /* Space between project boxes */
+    margin-bottom: 20px; /* Space below each project section */
+}
+
 .project {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 10px 0;
+    background: #f4f4f4; /* Light background color */
+    border: 1px solid #ccc; /* Border around project box */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px; /* Inner spacing */
+    flex: 1 1 calc(33.333% - 20px); /* 3 projects per row, adjust for gaps */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    min-width: 250px; /* Minimum width for responsiveness */
+}
+
+.project h5 {
+    margin-top: 0; /* Remove margin for title */
 }
 
 footer {
@@ -45,4 +60,48 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 100px; /* Adjust height as needed */
+}
+
+button {
+    background: #333; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Remove default border */
+    padding: 10px 15px; /* Inner padding */
+    cursor: pointer; /* Pointer cursor */
+}
+
+button:hover {
+    background: #555; /* Darker background on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project {
+        flex: 1 1 calc(50% - 20px); /* 2 projects per row on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .project {
+        flex: 1 1 100%; /* 1 project per row on small screens */
+    }
 }
